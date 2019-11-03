@@ -1,5 +1,5 @@
 import React from 'react';
-import Counter from './Counter';
+import Counter from '@libz/Counter';
 
 export const Internal = () => (
   <div>

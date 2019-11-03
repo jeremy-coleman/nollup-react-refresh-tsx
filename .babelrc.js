@@ -1,6 +1,6 @@
 
 const createTildifyConfig = dir => ({
-    "@uifabric":`./${dir}/@uifabric`,
+    "@libz":`./${dir}/@libz`,
   })
 
 const TILDIFY_CONFIG = createTildifyConfig('src')

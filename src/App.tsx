@@ -1,4 +1,4 @@
-import Counter from './Counter';
+import Counter from '@libz/Counter';
 import { Internal } from './Internal';
 import Switch from './Switch';
 import './App.css';
