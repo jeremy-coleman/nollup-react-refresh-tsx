@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "outDir": "dist/es",
+    "sourceMap": false,
+    "module": "esnext",
+    "target": "esnext",
+    "lib": ["dom","dom.iterable","esnext"],
+    "jsx": "react",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "checkJs": true,
+    "allowJs": true,
+    "baseUrl": "./src",
+  },
+  "include": ["./src"],
+  "plugins": [
+    //{"name": "typescript-tslint-plugin"}
+  ]
+}
