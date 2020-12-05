@@ -1,27 +1,16 @@
-import React , { Component } from 'react';
-import './Counter.css';
+import React from "react";
+import "./Counter.css";
+import { useInterval } from './useInterval';
 
-export default class Counter extends Component {
-    state = {
-            count: 0 
-        };
-    interval: number;
+function Counter(props) {
+  
+  const [value, setValue] = React.useState(0);
+  useInterval(() => {
+    let newValue = value + 1;
+    setValue(newValue);
+  }, 200);
 
-
-
-    componentDidMount() {
-        this.interval = window.setInterval(() => {
-            this.setState({
-                count: this.state.count + 1
-            })
-        }, 200);
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.interval)
-    }
-
-    render() {
-        return <div className="Counter">Counter: {this.state.count}</div>
-    }
+  return <div className="Counter">Counter: {value}</div>;
 }
+
+export default Counter;
