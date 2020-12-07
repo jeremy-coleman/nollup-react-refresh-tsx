@@ -8,6 +8,8 @@ import { terser } from "rollup-plugin-terser";
 import refresh from "rollup-plugin-react-refresh";
 var tsc = require("./tools/rollup-plugin-typescript-v2");
 
+const RESOLVE_EXTENSIONS = [".mjs", ".js", ".cjs", ".ts", ".tsx", ".jsx", ".cjsx", ".json"]
+
 let config = {
   input: "./src/main.tsx",
   output: {
@@ -28,13 +30,13 @@ let config = {
     babel({
       skipPreflightCheck: true,
       babelHelpers: "bundled",
-      extensions: [".mjs", ".js", ".cjs", ".tsx", ".jsx", ".jsx"],
+      extensions: RESOLVE_EXTENSIONS,
     }),
     node_resolve({
-      extensions: [".mjs", ".js", ".json", ".tsx", ".jsx", ".jsx"],
+      extensions: RESOLVE_EXTENSIONS,
     }),
     commonjs({
-      extensions: [".mjs", ".js", ".json", ".tsx", ".jsx", ".jsx"],
+      extensions: RESOLVE_EXTENSIONS,
       namedExports: {
         "node_modules/react/index.js": Object.keys(require("react")),
       },

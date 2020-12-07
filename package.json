@@ -35,7 +35,7 @@
         "cross-env": "7.0.3",
         "nollup": "0.14.2",
         "react-refresh": "0.9.0",
-        "rollup": "2.34.1",
+        "rollup": "2.34.2",
         "rollup-plugin-commonjs-alternate": "0.7.1",
         "rollup-plugin-hot-css": "0.4.0",
         "rollup-plugin-react-refresh": "0.0.2",
