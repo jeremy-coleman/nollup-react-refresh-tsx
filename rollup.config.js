@@ -31,10 +31,10 @@ let config = {
       extensions: [".mjs", ".js", ".cjs", ".tsx", ".jsx", ".jsx"],
     }),
     node_resolve({
-      extensions: [".mjs", ".js", ".json", ".node", ".tsx", ".jsx", ".jsx"],
+      extensions: [".mjs", ".js", ".json", ".tsx", ".jsx", ".jsx"],
     }),
     commonjs({
-      extensions: [".mjs", ".js", ".json", ".node", ".tsx", ".jsx", ".jsx"],
+      extensions: [".mjs", ".js", ".json", ".tsx", ".jsx", ".jsx"],
       namedExports: {
         "node_modules/react/index.js": Object.keys(require("react")),
       },
