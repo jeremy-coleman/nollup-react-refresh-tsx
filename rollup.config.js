@@ -6,6 +6,7 @@ import replace from '@rollup/plugin-replace';
 import static_files from 'rollup-plugin-static-files';
 import { terser } from 'rollup-plugin-terser';
 import refresh from 'rollup-plugin-react-refresh';
+var tsc = require('./tools/rollup-plugin-typescript-v2')
 
 let config = {
     input: './src/main.tsx',
@@ -16,6 +17,7 @@ let config = {
         assetFileNames: '[name].[hash][extname]'
     },
     plugins: [
+        tsc(),
         replace({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
         }),
@@ -32,6 +34,7 @@ let config = {
             extensions:[ '.mjs', '.js', '.json', '.node',".tsx",".jsx",".jsx"]
         }),
         commonjs({
+            extensions:[ '.mjs', '.js', '.json', '.node',".tsx",".jsx",".jsx"],
             namedExports: {
                 'node_modules/react/index.js': [
                     'Component',
