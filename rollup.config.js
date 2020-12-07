@@ -6,7 +6,7 @@ import replace from "@rollup/plugin-replace";
 import static_files from "rollup-plugin-static-files";
 import { terser } from "rollup-plugin-terser";
 import refresh from "rollup-plugin-react-refresh";
-var tsc = require("./tools/rollup-plugin-typescript-v2");
+//var tsc = require("./tools/rollup-plugin-typescript-v2");
 
 const RESOLVE_EXTENSIONS = [".mjs", ".js", ".cjs", ".ts", ".tsx", ".jsx", ".cjsx", ".json"]
 
@@ -19,7 +19,7 @@ let config = {
     assetFileNames: "[name].[hash][extname]",
   },
   plugins: [
-    tsc(),
+    //tsc(),
     replace({
       "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
     }),
