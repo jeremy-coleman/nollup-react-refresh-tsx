@@ -21,6 +21,7 @@ let config = {
   plugins: [
     //tsc(),
     replace({
+      preventAssignment: true,
       "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
     }),
     hotcss({

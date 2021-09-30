@@ -1,33 +1,35 @@
-import Counter from "@libz/Counter";
-import { Internal } from "./Internal";
-import Switch from "./Switch";
-import "./App.css";
-import React from "react";
+import Counter from "@libz/Counter"
+import { Internal } from "./Internal"
+import Switch from "./Switch"
+import "./App.css"
+import React from "react"
 
-//some issue with babel helpers. Using babel/runtime is dumbAF
-//import {createUseStyles} from 'react-jss'
-// let appStyles = createUseStyles({
-//     root:{
-//         backgroundColor: 'red'
-//     }
-// })
+//previously had some issue with babel helpers. Seems resolved now.
+import { createUseStyles } from "react-jss"
+
+let useAppStyles = createUseStyles({
+  root: {
+    backgroundColor: "green"
+  }
+})
 
 let styles = {
   root: {
-    backgroundColor: "red",
-  },
-};
+    backgroundColor: "orange"
+  }
+}
 
 let App = () => {
-  //let styles = appStyles()
+  let classes = useAppStyles()
   return (
     <div className="App">
+      <h1 className={classes.root}>Hello World JSS</h1>
       <h1 style={styles.root}>Hello World</h1>
       <Internal />
       <Counter />
       <Switch />
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
